@@ -1,0 +1,198 @@
+body {
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:hsl(257, 40%, 49%);
+    color: #fff;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+
+.btn {
+    background-color:#fff;
+    color: hsl(257, 40%, 49%);
+    width: 15rem;
+    box-shadow: 0px 8px 9px -6px #000000;
+    transition: 0.5s;
+}
+
+
+.btn:hover {
+    background-color:hsl(300, 69%, 71%);
+    color: #fff;
+    box-shadow: 0px 8px 9px -6px #000000;
+    transition: 0.5s;
+}
+
+.grid-container {
+    display: grid;
+    padding: 0 6rem;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+.grid-header{
+    grid-area: header;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    max-width: 100%;
+}
+
+.grid-header > img {
+    width: 10rem;
+}
+
+.grid-main {
+    grid-area: main;
+    max-width: 100%;
+    
+}
+
+.grid-footer {
+    grid-area: footer;
+    max-width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.grid-main > img {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.grid-main > h1, p, button {
+    margin: 1.5rem auto;
+}
+
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+
+.icon{
+    position:relative;
+    text-align:center;
+    width: 0px;
+    height: 0px;
+    padding: 20px;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.icon i {
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    left: 10.5px;
+}
+
+.icon.social {
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icon.social:hover {
+    border-color: hsl(300, 69%, 71%);
+	color: hsl(300, 69%, 71%);
+	transition: 0.5s;
+}
+
+/* mobile devices min width 375px */
+@media (min-width: 1440px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        /* background-repeat: no-repeat;
+        background-size: cover;
+        background-color:hsl(257, 40%, 49%);
+        color: #fff;
+    
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    
+        width: 100%;
+        height: 100%;
+    
+        text-align: center;
+        padding: 3rem 3rem; */
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "header .."
+        "main main"
+        ".. footer"
+        ;
+    }
+
+    .grid-main {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "img h1"
+        "img p"
+        "img btn"
+        ;
+    }
+
+    .grid-main > img {
+        grid-area: img;
+    }
+
+    .grid-main > h1 {
+        grid-area: h1;
+        margin: auto;
+        padding: 0 10rem;
+    }
+
+    .grid-main > p {
+        grid-area: p;
+        margin: auto;
+        text-align: left;
+        padding: 0 10rem;
+    }
+
+    .grid-main > button {
+        grid-area: btn;
+        margin: auto;
+    }
+
+    footer {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color:hsl(300, 69%, 71%); }
